@@ -11,6 +11,23 @@ using namespace std;
 
 float interval = 1;
 
+void alarm_handler(int signo) {
+  if (signo == SIGALRM) {
+    cout << "alarm goes off" << endl;
+  }
+}
+
+void sigusr1_handler(int signo) {
+  if (signo == SIGALRM) {
+    cout << "sigusr2 goes off" << endl;
+  }
+}
+
+void sigusr2_handler(int signo) {
+  if (signo == SIGALRM) {
+    cout << "sigusr2 goes off" << endl;
+  }
+}
 /*
  * name:    confirm_exit
  * purpose: gets inputs from the user until the user input Y/y/N/n

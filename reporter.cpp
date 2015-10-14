@@ -4,6 +4,11 @@
 #include <unistd.h>
 #include <fstream>
 #include <cstdlib>
+#include <iostream>
+#include <sys/types.h>
+#include <sstream>
+#include <cstdio>
+#include <cstring>
 
 #include "reporter.h"
 
@@ -15,6 +20,8 @@ int main(int argc, char** argv) {
   // Give PID and basic information
   cout << "The reporter program's PID is " << getpid() << endl;
   cout << "The default report interval is " << interval << endl;
+
+
 
 
   struct sigaction s1;
